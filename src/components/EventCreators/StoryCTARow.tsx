@@ -41,7 +41,7 @@ export default function StoryCTARow({
             </p>
             <button
               onClick={onButtonClick}
-              className="inline-flex items-center border border-neutral-400 rounded-full px-6 py-2.5 text-sm text-neutral-900 hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-colors cursor-pointer"
+              className="inline-flex items-center border border-neutral-400 rounded-full px-6 py-2.5 text-sm text-neutral-900 hover:border-[#C77B4E] hover:text-[#C77B4E] transition-colors cursor-pointer"
             >
               {buttonLabel}
             </button>

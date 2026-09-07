@@ -103,11 +103,11 @@ export default function EventContactForm() {
             </div>
 
             <button
-              type="submit"
-              className="inline-flex items-center border border-neutral-300 rounded-full px-6 py-2 text-[13px] text-neutral-800 hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-colors cursor-pointer"
-            >
-              Send
-            </button>
+  type="submit"
+  className="inline-flex items-center border border-neutral-300 rounded-full px-6 py-2 text-[13px] text-neutral-800 hover:border-[#C77B4E] hover:text-[#C77B4E] transition-colors cursor-pointer"
+>
+  Send
+</button>
           </form>
         )}
 

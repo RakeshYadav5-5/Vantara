@@ -3,21 +3,29 @@ const TEAM = [
     name: "Deborah Faber",
     role: "Head of the events team",
     image: "https://picsum.photos/seed/cosa-ec-deborah/400/400",
+    email: "deborah.faber@cosatravel.ch",
+    phone: "+41 44 269 40 30",
   },
   {
     name: "Jonas Vogel",
     role: "Event Creator",
     image: "https://picsum.photos/seed/cosa-ec-jonasvogel/400/400",
+    email: "jonas.vogel@cosatravel.ch",
+    phone: "+41 44 269 40 30",
   },
   {
     name: "Melissa Blaschi",
     role: "Event creator",
     image: "https://picsum.photos/seed/cosa-ec-melissab/400/400",
+    email: "melissa.blaschi@cosatravel.ch",
+    phone: "+41 44 269 40 30",
   },
   {
     name: "Hannah Bachtod",
     role: "Event creator",
     image: "https://picsum.photos/seed/cosa-ec-hannahb/400/400",
+    email: "hannah.bachtod@cosatravel.ch",
+    phone: "+41 44 269 40 30",
   },
 ];
 
@@ -42,7 +50,7 @@ export default function TeamGrid() {
         {/* Team */}
         <div className="grid grid-cols-4 gap-x-4">
           {TEAM.map((member) => (
-            <div key={member.name} className="min-w-0">
+            <div key={member.name} className="min-w-0 group">
 
               {/* Image */}
               <div
@@ -61,6 +69,20 @@ export default function TeamGrid() {
               <p className="text-[11px] leading-[1.4] text-neutral-500">
                 {member.role}
               </p>
+
+              {/* Contact info - reveals on hover */}
+              <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-in-out">
+                <div className="overflow-hidden">
+                  <div className="border-t border-[#C77B4E] mt-3 pt-3">
+                    <p className="text-[11px] leading-[1.5] text-neutral-600">
+                      {member.email}
+                    </p>
+                    <p className="text-[11px] leading-[1.5] text-neutral-600">
+                      {member.phone}
+                    </p>
+                  </div>
+                </div>
+              </div>
 
             </div>
           ))}

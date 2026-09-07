@@ -80,14 +80,14 @@ export default function EventTypesGrid() {
                 {item.href ? (
                   <Link
                     href={item.href}
-                    className="inline-flex items-center border border-neutral-400 rounded-md px-5 py-2 text-[11px] text-neutral-900 hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-colors"
+                    className="inline-flex items-center border border-neutral-400 rounded-md px-5 py-2 text-[11px] text-neutral-900 hover:border-[#C77B4E] hover:text-[#C77B4E] transition-colors"
                   >
                     Read More
                   </Link>
                 ) : (
                   <button
                     onClick={() => setOpenIndex(i)}
-                    className="inline-flex items-center border border-neutral-400 rounded-md px-5 py-2 text-[11px] text-neutral-900 hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-colors cursor-pointer"
+                    className="inline-flex items-center border border-neutral-400 rounded-md px-5 py-2 text-[11px] text-neutral-900 hover:border-[#C77B4E] hover:text-[#C77B4E] transition-colors cursor-pointer"
                   >
                     Read More
                   </button>

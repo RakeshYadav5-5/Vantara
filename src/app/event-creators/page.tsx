@@ -18,7 +18,7 @@ export default function EventCreatorsPage() {
       <Navbar />
 
       <PageHero
-        eyebrow="Cosa Events"
+        eyebrow="Event creators"
         title="Cosa events"
         subtitle="Celebrating & travelling together is more fun"
         image="https://picsum.photos/seed/cosa-ec-hero/1600/900"

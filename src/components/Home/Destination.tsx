@@ -37,7 +37,18 @@ export default function Destination() {
 
         <button
           onClick={() => setOpen(true)}
-          className="inline-flex items-center border border-neutral-300 rounded-full px-6 py-2 text-[13px] text-neutral-800 hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-colors cursor-pointer"
+          className="
+inline-flex items-center
+border border-neutral-300
+rounded-[20px]
+px-8 py-4
+text-[15px]
+tracking-[0.08em]
+text-neutral-700
+transition-all duration-300
+hover:border-[#C97756]
+hover:text-[#C97756]
+"
         >
           Explore The World
         </button>
@@ -56,7 +67,18 @@ export default function Destination() {
         <a
           href="#signup"
           onClick={() => setOpen(false)}
-          className="inline-flex items-center border border-neutral-300 rounded-full px-6 py-2 text-[13px] text-neutral-800 hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-colors"
+          className="
+inline-flex items-center
+border border-neutral-300
+rounded-[20px]
+px-8 py-4
+text-[15px]
+tracking-[0.08em]
+text-neutral-700
+transition-all duration-300
+hover:border-[#C97756]
+hover:text-[#C97756]
+"
         >
           Get In Touch
         </a>

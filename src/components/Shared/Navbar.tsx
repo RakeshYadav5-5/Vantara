@@ -6,6 +6,7 @@ import { FiSearch, FiHeart, FiPhone, FiX } from "react-icons/fi";
 import { TbWorld } from "react-icons/tb";
 import Link from "next/link";
 import Image from "next/image";
+import { FaHeart, FaSearch } from "react-icons/fa";
 
 type MenuLink = {
   label: string;
@@ -178,98 +179,101 @@ export default function Navbar() {
             </button>
 
             {/* CALL US */}
-            <a
-              href="tel:+41000000000"
-              className="hidden items-center gap-2 text-sm tracking-wide text-white transition-colors duration-300 hover:text-[#182D27] sm:flex"
-            >
-              <FiPhone className="h-4 w-4" />
-              Call Us
-            </a>
+           <a
+  href="tel:+977981234567"
+  className="group flex items-center gap-2 text-white"
+>
+  <FiPhone className="h-4 w-4 transition-colors duration-300 group-hover:text-[#0F3B35]" />
+
+  <span className="relative overflow-hidden h-6 w-[140px]">
+    {/* Call Us */}
+    <span className="absolute left-0 top-0 transition-all duration-300 group-hover:-translate-y-full group-hover:opacity-0">
+      Call Us
+    </span>
+
+    {/* Phone Number */}
+    <span className="absolute left-0 top-full whitespace-nowrap text-[#0F3B35] transition-all duration-300 group-hover:top-0">
+      +977 981234567
+    </span>
+  </span>
+</a>
           </div>
 
           {/* ================= COSA LOGO ================= */}
           <Link
-            href="/"
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-serif text-3xl tracking-[0.25em] text-white transition-colors duration-300 hover:text-[#182D27]"
-          >
-            COSA
-          </Link>
+  href="/"
+  className="
+    absolute left-1/2 top-1/2
+    -translate-x-1/2 -translate-y-1/2
+    font-heading
+    italic
+    font-light
+    text-[72px]
+    tracking-[0.08em]
+    text-white
+    transition-colors
+    duration-300
+    hover:text-[#182D27]
+  "
+>
+  COSA
+</Link>
 
           {/* ================= RIGHT SIDE ================= */}
-          <div className="flex items-center gap-5">
+<div className="flex items-center gap-10">
 
-            {/* LANGUAGE */}
-            <div className="relative">
-              <button
-                onClick={() => {
-                  setLangOpen((value) => !value);
-                  setCurrencyOpen(false);
-                }}
-                aria-label="Language"
-                className="text-white transition-colors duration-300 hover:text-[#182D27]"
-              >
-                <TbWorld className="h-5 w-5" />
-              </button>
+  {/* EXPLORE WORLD */}
+  <div className="group relative flex flex-col items-center">
+    <Link
+      href="/explore-the-world"
+      className="text-white transition-colors duration-300 group-hover:text-[#0F3B35]"
+    >
+      <TbWorld className="h-7 w-7" />
+    </Link>
 
-              {langOpen && (
-                <div className="absolute right-0 mt-3 w-44 rounded-xl border border-slate-200 bg-white p-2 shadow-lg">
-                  {LANGUAGES.map((language) => (
-                    <button
-                      key={language.code}
-                      className="block w-full rounded-md px-3 py-1.5 text-left text-sm text-slate-600 transition-colors hover:bg-slate-50"
-                    >
-                      {language.label}
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
+    <span className="absolute top-10 whitespace-nowrap text-sm text-[#0F3B35] underline opacity-0 transition-all duration-300 group-hover:opacity-100">
+      Explore World
+    </span>
+  </div>
 
-            {/* CURRENCY */}
-            <div className="relative">
-              <button
-                onClick={() => {
-                  setCurrencyOpen((value) => !value);
-                  setLangOpen(false);
-                }}
-                aria-label="Currency"
-                className="text-white transition-colors duration-300 hover:text-[#182D27]"
-              >
-                <TbWorld className="h-5 w-5" />
-              </button>
+  {/* EXPLORE NEPAL */}
+  <div className="group relative flex flex-col items-center">
+    <Link
+      href="/explore-nepal"
+      className="text-white transition-colors duration-300 group-hover:text-[#0F3B35]"
+    >
+      <TbWorld className="h-7 w-7" />
+    </Link>
 
-              {currencyOpen && (
-                <div className="absolute right-0 mt-3 w-44 rounded-xl border border-slate-200 bg-white p-2 shadow-lg">
-                  {CURRENCIES.map((currency) => (
-                    <button
-                      key={currency.code}
-                      className="block w-full rounded-md px-3 py-1.5 text-left text-sm text-slate-600 transition-colors hover:bg-slate-50"
-                    >
-                      {currency.label}
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
+    <span className="absolute top-10 whitespace-nowrap text-sm text-[#0F3B35] underline opacity-0 transition-all duration-300 group-hover:opacity-100">
+      Explore Nepal
+    </span>
+  </div>
 
-            {/* SEARCH */}
-            <button
-              aria-label="Search"
-              className="text-white transition-colors duration-300 hover:text-[#182D27]"
-            >
-              <FiSearch className="h-5 w-5" />
-            </button>
+  {/* SEARCH */}
+  <button
+    aria-label="Search"
+    className="group relative h-7 w-7"
+  >
+    <FiSearch className="absolute inset-0 h-7 w-7 text-white transition-opacity duration-300 group-hover:opacity-0" />
 
-            {/* HEART */}
-            <button
-              aria-label="Saved trips"
-              className="text-white transition-colors duration-300 hover:text-[#182D27]"
-            >
-              <FiHeart className="h-5 w-5" />
-            </button>
-          </div>
-        </div>
-      </header>
+    <FaSearch className="absolute inset-0 h-7 w-7 text-[#0F3B35] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+  </button>
+
+  {/* HEART */}
+  <button
+    aria-label="Saved trips"
+    className="group relative h-7 w-7"
+  >
+    <FiHeart className="absolute inset-0 h-7 w-7 text-white transition-opacity duration-300 group-hover:opacity-0" />
+
+    <FaHeart className="absolute inset-0 h-7 w-7 text-[#0F3B35] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+  </button>
+
+</div>
+
+  </div>
+  </header>
 
       {/* ================= FULL SCREEN MENU ================= */}
       {menuOpen && (
@@ -278,13 +282,7 @@ export default function Navbar() {
           {/* MENU TOP BAR */}
           <div className="flex items-center justify-between px-8 py-7">
 
-            <Link
-              href="/"
-              onClick={() => setMenuOpen(false)}
-              className="font-serif text-2xl tracking-[0.25em] text-[#182D27]"
-            >
-              COSA
-            </Link>
+            
 
             <button
               onClick={() => setMenuOpen(false)}

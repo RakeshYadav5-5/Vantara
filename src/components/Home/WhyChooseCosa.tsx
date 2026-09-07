@@ -43,9 +43,20 @@ export default function WhyChooseCosa() {
           </p>
          <a
   href="/why-choose-cosa"
-  className="inline-flex items-center border border-neutral-300 rounded-[20px] px-8 py-4 text-[15px] tracking-[0.08em] text-neutral-700 transition-all duration-300 hover:border-[#C97756] hover:text-[#C97756]"
->
-  Tell Me More
+  className="
+inline-flex items-center
+border border-neutral-300
+rounded-[20px]
+px-8 py-4
+text-[15px]
+tracking-[0.08em]
+text-neutral-700
+transition-all duration-300
+hover:border-[#C97756]
+hover:text-[#C97756]
+"
+  >
+    Tell Me More
 </a>
         </div>
       </div>

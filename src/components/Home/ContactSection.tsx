@@ -44,7 +44,19 @@ export default function ContactSection() {
         </p>
         <Link
           href="/our-team"
-          className="inline-flex items-center border border-neutral-300 rounded-full px-5 py-1.5 text-[13px] text-neutral-800 hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-colors mb-16"
+         className="
+inline-flex items-center
+border border-neutral-300
+rounded-full
+px-4 py-2
+text-[12px]
+tracking-[0.06em]
+uppercase
+text-neutral-700
+transition-all duration-300
+hover:border-[#C97756]
+hover:text-[#C97756]
+"
         >
           Meet The Team
         </Link>

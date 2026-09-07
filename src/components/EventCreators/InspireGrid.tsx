@@ -59,11 +59,11 @@ export default function InspireGrid() {
                   {s.summary}
                 </p>
                 <button
-                  onClick={() => setOpenIndex(i)}
-                  className="inline-flex items-center border border-neutral-400 rounded-full px-5 py-2 text-[12.5px] text-neutral-900 hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-colors cursor-pointer"
-                >
-                  Read More
-                </button>
+  onClick={() => setOpenIndex(i)}
+  className="inline-flex items-center border border-neutral-400 rounded-md px-5 py-2 text-[12.5px] text-neutral-900 hover:border-[#C77B4E] hover:text-[#C77B4E] transition-colors cursor-pointer"
+>
+  Read More
+</button>
               </div>
             ))}
           </div>

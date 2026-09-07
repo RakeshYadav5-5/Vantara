@@ -8,6 +8,8 @@ import EventsInPractice from "@/components/CorporateEvents/EventsInPractice";
 import WantToKnowMore from "@/components/CorporateEvents/WantToKnowMore";
 import DiscoverCosaEvents from "@/components/CorporateEvents/DiscoverCosaEvents";
 
+
+
 export default function CorporateEventsPage() {
   return (
     <>
@@ -31,6 +33,7 @@ export default function CorporateEventsPage() {
           while our international network gives you VIP access to
           attractions, cultural immersions or adventurous activities.
         </IntroText>
+       
 
         <PillarsGrid />
         <EventsInPractice />
